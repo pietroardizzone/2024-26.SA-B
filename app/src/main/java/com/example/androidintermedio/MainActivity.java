@@ -2,6 +2,7 @@ package com.example.androidintermedio;
 
 import static com.example.androidintermedio.R.*;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -13,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidintermedio.model.Product;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     RecyclerView recyclerView ;
     Product[] mockData = {
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        // EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(id.recycler_view);
         recyclerView.setAdapter(productsAdapter);
